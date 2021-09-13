@@ -35,7 +35,6 @@ if instructions == "no":
 
 # num_check
 def num_check(question, low, high):
-    balance == 1
     error = "Please input a number between {} and {}".format(low, high)
     question = "How much money would you like to input?"
 
@@ -54,36 +53,36 @@ def num_check(question, low, high):
 
 STARTING_BALANCE = num_check("How much do you want to play with?", 1, 10)
 
-# **** Main routine ****
+# Token Generator
 loop_continue = "true"
 
+while loop_continue == "true":
+    def token_gen():
+        for i in range(0, 500):
+            chosen = random.randint(1, 100)
 
-def token_gen():
-    for i in range(0, 500):
-        chosen = random.randint(1, 100)
-
-    if 1 <= chosen <= 5:
-        chosen = "Unicorn"
-        balance = 4
-        return [balance, chosen]
-    elif 6 <= chosen <= 36:
-        chosen = "Donkey"
-        balance = 1
-        return [balance, chosen]
-    elif chosen % 2 == 0:
-        chosen = "Horse"
-        balance = 0.5
-        return [balance, chosen]
-    else:
-        chosen = "Zebra"
-        balance = 0.5
-        return [balance, chosen]
+        if 1 <= chosen <= 5:
+            chosen = "Unicorn"
+            balance = 4
+            return [balance, chosen]
+        elif 6 <= chosen <= 36:
+            chosen = "Donkey"
+            balance = 1
+            return [balance, chosen]
+        elif chosen % 2 == 0:
+            chosen = "Horse"
+            balance = 0.5
+            return [balance, chosen]
+        else:
+            chosen = "Zebra"
+            balance = 0.5
+            return [balance, chosen]
 
 
 
 STARTING_BALANCE == balance
 
-# Loop continue
+# Continues the loop (or doesn't)
 if balance > 0:
     loop_continue = str(input("Would you like to play again?"))
     loop_continue.strip().lower()
@@ -100,6 +99,7 @@ else:
     print("*** Out of money! ***")
     print("*** You loose ***")
 
+# The main function (runs the code)
 while loop_continue == "true":
     tokens = token_gen()
     print()
