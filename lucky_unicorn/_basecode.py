@@ -1,11 +1,14 @@
-# import
+# Pre-script Things
 import random
+loop_continue = "true"
 
 # functions
+
+
 tokens = ["unicorn", "horse", "zebra", "donkey"]
 balance = 0
 
-
+# Yes/no
 def yes_no(question):
     valid = False
     while not valid:
@@ -32,8 +35,7 @@ if instructions == "no":
     print("Placeholder instructions")
     print()
 
-
-# num_check
+# Num check
 def num_check(question, low, high):
     error = "Please input a number between {} and {}".format(low, high)
     question = "How much money would you like to input?"
@@ -78,20 +80,15 @@ while loop_continue == "true":
             balance = 0.5
             return [balance, chosen]
 
-
-
-STARTING_BALANCE == balance
-
 # Continues the loop (or doesn't)
 if balance > 0:
     loop_continue = str(input("Would you like to play again?"))
     loop_continue.strip().lower()
-    STARTING_BALANCE == balance
     if loop_continue == "yes" or loop_continue == "y" and balance > 0:
-        loop_continue == "true"
+        var = loop_continue == "true"
     elif loop_continue == "no" or loop_continue == "n" and balance > 0:
         balance -= tokens[0]
-        loop_continue == "false"
+        var = loop_continue == "false"
 
     else:
         print("Please input yes or no")
