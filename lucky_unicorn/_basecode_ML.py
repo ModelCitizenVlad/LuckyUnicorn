@@ -71,14 +71,14 @@ while loop_continue == "true" and balance >= 1:
     if balance >= 1:
         replay = input("Would you like to play again?").strip().lower()
         if replay == "yes" or replay == "y":
-            loop_continue == "true"
+            loop_continue = "true"
         elif replay == "no" or replay == "n":
-            loop_continue == "false"
+            loop_continue = "false"
             print("Game over!")
             print("Exiting game with ${}".format(balance))
         else:
             print("Please input yes or no")
     else:
-        loop_continue == "false"
+        loop_continue = "false"
         print("*** Out of money! ***")
         print("  *** You loose ***")
